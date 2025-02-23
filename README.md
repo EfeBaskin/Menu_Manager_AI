@@ -107,10 +107,12 @@ streamlit run ui.py
 ## Example Images
 
 ### AI-Generated Information
-![AI Info](https://github.com/user-attachments/assets/9c7ac6ad-4219-491e-a18d-412d7f15abc7)
+
+![Get Info](https://github.com/user-attachments/assets/62ae13be-d4a6-4849-84bf-edb8fe8c5d64)
 
 ### AI Recommendations
-![Recommendations](https://github.com/user-attachments/assets/1dbee6ee-d526-47ab-8552-9b5fa4df421d)
+
+![Recommendation](https://github.com/user-attachments/assets/c26db73c-e7d1-4feb-8e68-5987a7403dc0)
 
 ## Known Issues
 
@@ -123,5 +125,4 @@ Contributions are welcome! Please follow these steps:
 1. Fork the repository.
 2. Create a new branch (feature-branch).
 3. Make your changes and commit them.
-4. Push to your branch and submit and pull request.
-
+4. Push to your branch and submit a pull request.
