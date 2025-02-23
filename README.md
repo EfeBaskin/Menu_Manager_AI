@@ -94,8 +94,7 @@ streamlit run ui.py
 |--------|------------|-------------------------------------------------   |
 | POST | /upload      | Uploads the dataframe                              |
 | GET  | /data        | Retrieve all records                               |
-| POST | /process     | Processes the user prompt and decides the intent   |
-| POST | /agent       | Executes the decided intent                        |
+| POST | /agent       | Processes the prompt and executes                  |
 
 ## User Interface (UI)
 
