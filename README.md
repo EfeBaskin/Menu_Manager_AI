@@ -90,14 +90,12 @@ streamlit run ui.py
 
 ## API Endpoints
 
-| Method | Endpoint       | Description                         |
-|--------|---------------|-------------------------------------|
-| POST | /create      | Add a new record                   |
-| GET  | /read        | Retrieve all records               |
-| PUT  | /update/{id} | Update an existing record          |
-| DELETE | /delete/{id} | Delete a record                    |
-| POST | /recommend   | Get AI-generated recommendations     |
-| POST | /search      | Retrieve AI-generated information by leveraging serper api |
+| Method | Endpoint   | Description                                        |
+|--------|------------|-------------------------------------------------   |
+| POST | /upload      | Uploads the dataframe                              |
+| GET  | /data        | Retrieve all records                               |
+| POST | /process     | Processes the user prompt and decides the intent   |
+| POST | /agent       | Executes the decided intent                        |
 
 ## User Interface (UI)
 
