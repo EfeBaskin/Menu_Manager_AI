@@ -1,0 +1,12 @@
+fastapi==0.111.1
+uvicorn==0.20.0
+pandas==1.5.3
+streamlit==1.18.1
+altair<5
+python-env
+python-dotenv~=1.0.1
+pydantic~=2.10.6
+openpyxl~=3.1.5
+openai>=1.36.0,<2.0.0
+requests~=2.32.3
+numpy~=1.26.4
