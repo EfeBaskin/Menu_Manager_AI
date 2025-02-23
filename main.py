@@ -86,9 +86,6 @@ class CRUDOperations:
     def create_record(self, data: Any) -> str:
         # For structuring both non dictionary and dictionary type
         if isinstance(data, dict):
-            for key in data.keys():
-                if key not in self.df.columns:
-                    self.df[key] = None
             row = {col: data.get(col, None) for col in self.df.columns}
             self.df = pd.concat([self.df, pd.DataFrame([row])], ignore_index=True)
         else:
@@ -103,8 +100,6 @@ class CRUDOperations:
         if 0 <= index < len(self.df):
             if isinstance(new_data, dict):
                 for key, value in new_data.items():
-                    if key not in self.df.columns:
-                        self.df[key] = None
                     self.df.at[index, key] = value
             else:
                 self.df.at[index, "Data"] = new_data
@@ -130,9 +125,6 @@ class CRUDOperations:
         return "Failed to process CRUD operation"
 
 crud_handler = CRUDOperations()
-
-class UserPrompt(BaseModel):
-    prompt: str
 
 class AgentPrompt(BaseModel):
     prompt: str
@@ -253,13 +245,6 @@ async def MenuManager(prompt: str, reasoning: bool = True) -> str:
         return chain_output
     else:
         return result
-
-
-@app.post("/process")
-async def process_prompt(user_prompt: UserPrompt):
-    res = await MenuManager(user_prompt.prompt)
-    return {"response": res}
-
 
 @app.post("/agent")
 async def process_agent(agent_prompt: AgentPrompt):
