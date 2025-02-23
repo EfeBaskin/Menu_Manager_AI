@@ -22,7 +22,7 @@ user_prompt = st.text_input("For example: 'I want something with ____', 'Delete 
 if st.button("Submit Prompt"):
     if user_prompt:
         st.spinner("Processing prompt...")
-        response = requests.post(f"{API_URL}/process", json={"prompt": user_prompt})
+        response = requests.post(f"{API_URL}/agent", json={"prompt": user_prompt})
         if response.status_code == 200:
             result = response.json().get("response", "No response received")
             st.write("**Response:**", result)
